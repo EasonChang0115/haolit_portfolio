@@ -1,7 +1,6 @@
 import Layout from '@/components/Layout'
 import Head from 'next/head'
 import Image from 'next/image'
-import profile from '../../public/images/profile/developer-pic-2.jpeg'
 import { useInView, useMotionValue, useSpring } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 import Skills from '@/components/Skills'
@@ -85,8 +84,10 @@ export default function About() {
               />
               <Image
                 className="h-auto w-full rounded-2xl"
-                src={profile}
+                src="https://haolit.s3.ap-northeast-1.amazonaws.com/images/developer-pic-2.jpeg"
                 alt="Codebucks"
+                width="100"
+                height="100"
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"

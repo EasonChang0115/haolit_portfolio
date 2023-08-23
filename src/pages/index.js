@@ -24,16 +24,14 @@ export default function Home() {
       >
         <Layout className="!pt-0 md:!pt-16 sm:!pt-16 max-w-[1800px] mx-auto">
           <div className="flex w-full items-start justify-between md:flex-col">
-            <div className="w-1/2  flex justify-center items-center lg:hidden md:flex md:w-full">
+            <div className="w-1/2 flex justify-center items-center lg:hidden md:flex md:w-full">
               <Image
-                src="/images/profile/developer-pic-3.png"
-                width="500"
-                height="500"
+                src="https://haolit.s3.ap-northeast-1.amazonaws.com/images/developer-pic-3.png"
+                // src={profilePic}
+                className="h-auto w-full rounded-2xl max-h-[615px] object-contain"
                 alt="CodeBucks"
-                style={{
-                  height: '100%',
-                }}
-                priority
+                width="100"
+                height="100"
               />
             </div>
             <div className="flex w-1/2 flex-col items-center self-center lg:w-full lg:text-center">
