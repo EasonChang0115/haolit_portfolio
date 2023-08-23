@@ -5,7 +5,6 @@ import Layout from '@/components/Layout'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import profilePic from '../../public/images/profile/developer-pic-3.png'
 import TransitionEffect from '@/components/TransitionEffect'
 
 export default function Home() {
@@ -21,13 +20,15 @@ export default function Home() {
 
       <TransitionEffect />
       <article
-        className={`flex min-h-screen items-center text-dark dark:text-light sm:items-start`}
+        className={`flex min-h-screen items-center text-dark dark:text-light sm:items-start  w-screen`}
       >
-        <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
+        <Layout className="!pt-0 md:!pt-16 sm:!pt-16 max-w-[1800px] mx-auto">
           <div className="flex w-full items-start justify-between md:flex-col">
             <div className="w-1/2  flex justify-center items-center lg:hidden md:flex md:w-full">
               <Image
-                src={profilePic}
+                src="/images/profile/developer-pic-3.png"
+                width="500"
+                height="500"
                 alt="CodeBucks"
                 style={{
                   height: '100%',
