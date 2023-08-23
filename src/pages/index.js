@@ -5,15 +5,14 @@ import Layout from '@/components/Layout'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import lightBulb from '../../public/images/svgs/miscellaneous_icons_1.svg'
-import profilePic from '../../public/images/profile/developer-pic-1.png'
+import profilePic from '../../public/images/profile/developer-pic-3.png'
 import TransitionEffect from '@/components/TransitionEffect'
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>HAO Lit 前端 Portfolio Website</title>
+        <title>HAO Lit | Portfolio</title>
         <meta
           name="description"
           content="HAO Lit 是位於台灣的全端網站開發工程師，熱衷於構建優秀的應用程式或網頁來改善周圍人的生活。為個人和小型企業、大型企業公司等客戶創造價值。"
@@ -26,12 +25,13 @@ export default function Home() {
       >
         <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
           <div className="flex w-full items-start justify-between md:flex-col">
-            <div className="w-1/2 lg:hidden md:inline-block md:w-full">
+            <div className="w-1/2  flex justify-center items-center lg:hidden md:flex md:w-full">
               <Image
                 src={profilePic}
                 alt="CodeBucks"
-                className="h-auto w-full"
-                sizes="100vw"
+                style={{
+                  height: '100%',
+                }}
                 priority
               />
             </div>

@@ -38,7 +38,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>HAO Lit 前端 Portfolio Website | About Page</title>
+        <title>HAO Lit | About</title>
         <meta
           name="description"
           content="HAO Lit 是位於台灣的全端網站開發工程師，熱衷於構建優秀的應用程式或網頁來改善周圍人的生活。為個人和小型企業、大型企業公司等客戶創造價值。"
