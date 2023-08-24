@@ -84,13 +84,14 @@ export default function About() {
               />
               <Image
                 className="h-auto w-full rounded-2xl"
-                src="https://haolit.s3.ap-northeast-1.amazonaws.com/images/developer-pic-2.jpeg"
+                src="/images/profile/developer-pic-2.jpeg"
                 alt="Codebucks"
                 width="100"
                 height="100"
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
+                unoptimized
                 priority
               />
             </div>

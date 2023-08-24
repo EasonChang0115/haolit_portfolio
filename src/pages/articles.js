@@ -47,6 +47,7 @@ const MovingImg = ({ title, img, link }) => {
           {title}
         </h2>
         <FramerImage
+          unoptimized
           src={img}
           ref={imgRef}
           alt={title}

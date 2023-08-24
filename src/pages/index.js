@@ -26,12 +26,12 @@ export default function Home() {
           <div className="flex w-full items-start justify-between md:flex-col">
             <div className="w-1/2 flex justify-center items-center lg:hidden md:flex md:w-full">
               <Image
-                src="https://haolit.s3.ap-northeast-1.amazonaws.com/images/developer-pic-3.png"
-                // src={profilePic}
+                src="/images/profile/developer-pic-3.png"
                 className="h-auto w-full rounded-2xl max-h-[615px] object-contain"
                 alt="CodeBucks"
                 width="100"
                 height="100"
+                unoptimized
               />
             </div>
             <div className="flex w-1/2 flex-col items-center self-center lg:w-full lg:text-center">

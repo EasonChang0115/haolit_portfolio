@@ -36,6 +36,7 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
       >
         <FramerImage
           src={img}
+          unoptimized
           className="h-auto w-full"
           alt={title}
           whileHover={{ scale: 1.05 }}
