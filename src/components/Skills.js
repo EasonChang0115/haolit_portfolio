@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 
 const Skill = ({ name, x, y }) => {
   const ref = useRef(null)
@@ -21,6 +21,88 @@ const Skill = ({ name, x, y }) => {
 }
 
 const Skills = () => {
+  const [skills, setSkills] = useState([
+    {
+      name: 'HTML',
+      x: '-20vw',
+      y: '2vw',
+    },
+    {
+      name: 'CSS',
+      x: '-5vw',
+      y: '-10vw',
+    },
+    {
+      name: 'JavaScript',
+      x: '20vw',
+      y: '6vw',
+    },
+    {
+      name: 'ReactJS',
+      x: '0vw',
+      y: '12vw',
+    },
+    {
+      name: 'VueJS',
+      x: '2vw',
+      y: '25vw',
+    },
+    {
+      name: 'NextJS',
+      x: '-20vw',
+      y: '-15vw',
+    },
+    {
+      name: 'NuxtJS',
+      x: '9vw',
+      y: '15vw',
+    },
+    {
+      name: 'Bootstrap',
+      x: '15vw',
+      y: '-12vw',
+    },
+    {
+      name: 'Github',
+      x: '-35vw',
+      y: '-5vw',
+    },
+    {
+      name: 'Web Design',
+      x: '29vw',
+      y: '-2vw',
+    },
+    {
+      name: 'Websocket',
+      x: '36vw',
+      y: '-10vw',
+    },
+    {
+      name: 'WebsRTC',
+      x: '20vw',
+      y: '-20vw',
+    },
+    {
+      name: 'Flutter',
+      x: '0vw',
+      y: '-20vw',
+    },
+    {
+      name: 'Firebase',
+      x: '-25vw',
+      y: '18vw',
+    },
+    {
+      name: 'React Native',
+      x: '-13vw',
+      y: '22vw',
+    },
+    {
+      name: 'Tawilwind CSS',
+      x: '28vw',
+      y: '18vw',
+    },
+  ])
   const ref = useRef(null)
   return (
     <>
@@ -41,25 +123,9 @@ const Skills = () => {
         >
           Web
         </motion.div>
-
-        <Skill name="HTML" x="-20vw" y="2vw" />
-
-        <Skill name="CSS" x="-5vw" y="-10vw" />
-        <Skill name="JavaScript" x="20vw" y="6vw" />
-        <Skill name="ReactJS" x="0vw" y="12vw" />
-        <Skill name="VueJS" x="2vw" y="25vw" />
-        <Skill name="NextJS" x="-20vw" y="-15vw" />
-        <Skill name="NuxtJS" x="9vw" y="15vw" />
-
-        <Skill name="Bootstrap" x="15vw" y="-12vw" />
-        <Skill name="Github" x="-35vw" y="-5vw" />
-        <Skill name="Web Design" x="29vw" y="-2vw" />
-        <Skill name="Websocket" x="36vw" y="-10vw" />
-        <Skill name="WebsRTC" x="20vw" y="-20vw" />
-        <Skill name="Flutter" x="0vw" y="-20vw" />
-        <Skill name="Firebase" x="-25vw" y="18vw" />
-        <Skill name="React Native" x="-13vw" y="22vw" />
-        <Skill name="Tawilwind CSS" x="28vw" y="18vw" />
+        {skills.map((item) => {
+          return <Skill key={item.name} name={item.name} x={item.x} y={item.y} />
+        })}
       </div>
     </>
   )

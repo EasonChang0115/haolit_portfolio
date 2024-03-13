@@ -20,19 +20,19 @@ export default function Home() {
 
       <TransitionEffect />
       <article
-        className={`flex min-h-screen items-center text-dark dark:text-light sm:items-start  w-screen`}
+        className={`flex items-center text-dark dark:text-light sm:items-start w-screen flex-1`}
       >
-        <Layout className="!pt-0 md:!pt-16 sm:!pt-16 max-w-[1800px] mx-auto">
-          <div className="flex w-full items-start justify-between md:flex-col">
-            <div className="w-1/2 flex justify-center items-center lg:hidden md:flex md:w-full">
-              <Image
-                src="/images/profile/developer-pic-3.png"
-                className="h-auto w-full rounded-2xl max-h-[615px] object-contain"
-                alt="CodeBucks"
-                width="100"
-                height="100"
-                unoptimized
-              />
+        <Layout className="!pt-0 md:!pt-16 sm:!pt-16 !py-0 max-w-[1800px] mx-auto flex-1">
+          <div className="flex w-full items-start justify-between md:flex-col md:items-center md:gap-1">
+            <div className="flex justify-center items-center w-1/2 md:flex md:w-[204px] lg:hidden">
+              <div className="relative w-full max-w-[408px] aspect-2/3">
+                <Image
+                  className="absolute transform -translate-x-1/2 -translate-y-1/2 !top-1/2 !left-1/2  max-h-[612px] max-w-[408px]"
+                  src="/images/profile/developer-pic-3.png"
+                  alt="CodeBucks"
+                  layout="fill"
+                />
+              </div>
             </div>
             <div className="flex w-1/2 flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
@@ -69,7 +69,6 @@ export default function Home() {
             </div>
           </div>
         </Layout>
-
         <HireMe />
       </article>
     </>

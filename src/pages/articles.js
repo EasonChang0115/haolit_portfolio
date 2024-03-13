@@ -13,7 +13,7 @@ import blog8 from '../../public/images/articles/What is higher order component i
 
 import Layout from '@/components/Layout'
 import Link from 'next/link'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import TransitionEffect from '@/components/TransitionEffect'
 
 const FramerImage = motion(Image)
@@ -127,6 +127,27 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
 }
 
 export default function Articles() {
+  const [featuredArticles, setFeaturedArticles] = useState([
+    {
+      id: 1,
+      img: blog1,
+      title: 'build a custom pagination component in reactjs from scratch',
+      time: '9 min read',
+      summary: `Learn how to build a custom pagination component in ReactJS from scratch. Follow this
+        step-by-step guide to integrate Pagination component in your ReactJS project.`,
+      link: 'https://devdreaming.com/blogs/create-pagination-component-reactjs',
+    },
+    {
+      id: 2,
+      img: blog2,
+      title: 'creating stunning loading screens in react: Build 3 types of loading screens',
+      time: '10 min read',
+      summary: `Learn how to create stunning loading screens in React with 3 different methods.
+        Discover how to use React-Loading, React-Lottie & build a custom loading screen. Improve the
+        user experience.`,
+      link: 'https://devdreaming.com/blogs/create-3-different-types-of-loading-screens-in-react',
+    },
+  ])
   return (
     <>
       <Head>
@@ -147,24 +168,16 @@ export default function Articles() {
           />
 
           <ul className="grid grid-cols-2 gap-16 lg:gap-8 md:grid-cols-1 md:gap-y-16">
-            <FeaturedArticle
-              img={blog1}
-              title="build a custom pagination component in reactjs from scratch"
-              time="9 min read"
-              summary="Learn how to build a custom pagination component in ReactJS from scratch. Follow this 
-              step-by-step guide to integrate Pagination component in your ReactJS project."
-              link="https://devdreaming.com/blogs/create-pagination-component-reactjs"
-            />
-
-            <FeaturedArticle
-              img={blog2}
-              title="creating stunning loading screens in react: Build 3 types of loading screens"
-              time="10 min read"
-              summary="Learn how to create stunning loading screens in React with 3 different methods. 
-              Discover how to use React-Loading, React-Lottie & build a custom loading screen. Improve the 
-              user experience."
-              link="https://devdreaming.com/blogs/create-3-different-types-of-loading-screens-in-react"
-            />
+            {featuredArticles.map((article) => (
+              <FeaturedArticle
+                key={article.id}
+                img={article.img}
+                title={article.title}
+                time={article.time}
+                summary={article.summary}
+                link={article.link}
+              />
+            ))}
           </ul>
 
           <h2 className="font-bold text-4xl w-full text-center mt-32 my-16">All Articles</h2>

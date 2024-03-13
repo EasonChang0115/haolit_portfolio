@@ -51,6 +51,12 @@ const Education = () => {
             place="國立清華大學 南大校區"
             info="相關課程包括數據結構和算法、工程數學以及數據統計等。"
           />
+          <Details
+            type="Technical Support Fundamentals"
+            time="2021.06.25"
+            place="Coursera"
+            info="入門級 IT 工作的基本技能，從計算機組裝和無線網絡到客戶服務和故障排除。"
+          />
         </ul>
       </div>
     </div>
