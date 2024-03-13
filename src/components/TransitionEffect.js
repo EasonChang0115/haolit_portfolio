@@ -1,30 +1,41 @@
-import { motion } from "framer-motion";
-import React from "react";
+import { motion } from 'framer-motion'
+import React from 'react'
 
 const TransitionEffect = () => {
   return (
     <>
       <motion.div
-        className="fixed top-0 bottom-0 right-full w-screen h-screen z-30 bg-primary"
-        initial={{ x: "100%", width: "100%" }}
-        animate={{ x:"0%", width:"0%" }}
-        exit={{x:["0%", "100%"], width:["0%","100%"]}}
-        transition={{ duration: 0.8, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="fixed top-0 bottom-0 right-full w-screen h-screen z-20 bg-light dark:bg-dark"
-        initial={{ x: "100%", width: "100%" }}
-        animate={{ x: "0%", width: "0%" }}
-        transition={{ delay: 0.2, duration: 0.8, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="fixed top-0 bottom-0 right-full w-screen h-screen z-10 bg-dark dark:bg-light"
-        initial={{ x: "100%", width: "100%" }}
-        animate={{ x: "0%", width: "0%" }}
-        transition={{ delay: 0.4, duration: 0.8, ease: "easeInOut" }}
-      />
+        id="loader-wrapper"
+        className="fixed top-0 bottom-0 right-full w-screen h-screen z-30 bg-light dark:bg-dark"
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1.6, ease: 'easeInOut' }}
+      >
+        <div class="loader-main">
+          <div class="animation-container">
+            <div class="lightning-container">
+              <div class="lightning white"></div>
+              <div class="lightning red"></div>
+            </div>
+            <div class="boom-container">
+              <div class="shape circle big white"></div>
+              <div class="shape circle white"></div>
+              <div class="shape triangle big yellow"></div>
+              <div class="shape disc white"></div>
+              <div class="shape triangle blue"></div>
+            </div>
+            <div class="boom-container second">
+              <div class="shape circle big white"></div>
+              <div class="shape circle white"></div>
+              <div class="shape disc white"></div>
+              <div class="shape triangle blue"></div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </>
-  );
-};
+  )
+}
 
-export default TransitionEffect;
+export default TransitionEffect
