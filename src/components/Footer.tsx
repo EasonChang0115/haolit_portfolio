@@ -15,10 +15,6 @@ const Footer = () => {
             Eason Chang
           </Link>
         </div>
-
-        <Link href="/about" target="_blank" className="underline underline-offset-2">
-          Say Hello
-        </Link>
       </Layout>
     </footer>
   )
