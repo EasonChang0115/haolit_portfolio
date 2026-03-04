@@ -4,20 +4,20 @@ const TransitionEffect = () => {
   return (
     <>
       <motion.div
-        className="fixed top-0 bottom-0 right-full w-screen h-screen z-30 bg-primary"
+        className="bg-primary fixed top-0 right-full bottom-0 z-30 h-screen w-screen"
         initial={{ x: '100%', width: '100%' }}
         animate={{ x: '0%', width: '0%' }}
         exit={{ x: ['0%', '100%'], width: ['0%', '100%'] }}
         transition={{ duration: 0.8, ease: 'easeInOut' }}
       />
       <motion.div
-        className="fixed top-0 bottom-0 right-full w-screen h-screen z-20 bg-light dark:bg-dark"
+        className="bg-light dark:bg-dark fixed top-0 right-full bottom-0 z-20 h-screen w-screen"
         initial={{ x: '100%', width: '100%' }}
         animate={{ x: '0%', width: '0%' }}
         transition={{ delay: 0.2, duration: 0.8, ease: 'easeInOut' }}
       />
       <motion.div
-        className="fixed top-0 bottom-0 right-full w-screen h-screen z-10 bg-dark dark:bg-light"
+        className="bg-dark dark:bg-light fixed top-0 right-full bottom-0 z-10 h-screen w-screen"
         initial={{ x: '100%', width: '100%' }}
         animate={{ x: '0%', width: '0%' }}
         transition={{ delay: 0.4, duration: 0.8, ease: 'easeInOut' }}

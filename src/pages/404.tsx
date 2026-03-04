@@ -15,15 +15,13 @@ const NotFound = () => {
         />
       </Head>
       <TransitionEffect />
-      <main className="h-[75vh] w-full dark:bg-dark">
-        <Layout className="relative !bg-transparent !pt-16 flex flex-col items-center justify-center">
+      <main className="dark:bg-dark h-[75vh] w-full">
+        <Layout className="relative flex flex-col items-center justify-center bg-transparent! pt-16!">
           <AnimatedText text="404" className=" " />
-          <AnimatedText text="Page Not Found." className=" !text-7xl " />
+          <AnimatedText text="Page Not Found." className="text-7xl!" />
           <Link
             href="/"
-            className="self-center !mt-4 inline-block rounded-lg border-2 border-solid bg-dark px-4 py-2
-        font-semibold text-light hover:border-dark hover:bg-light hover:text-dark 
-        dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light"
+            className="bg-dark text-light hover:border-dark hover:bg-light hover:text-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light mt-4! inline-block self-center rounded-lg border-2 border-solid px-4 py-2 font-semibold"
           >
             Go To Home
           </Link>

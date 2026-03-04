@@ -15,6 +15,7 @@
     "react-dom": "^19.2.4"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.1",
     "@types/node": "^22.13.10",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
@@ -22,7 +23,8 @@
     "eslint": "^9.22.0",
     "eslint-config-next": "^15.2.1",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.4.17",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "tailwindcss": "^4.2.1",
     "typescript": "^5.8.2"
   }
 }

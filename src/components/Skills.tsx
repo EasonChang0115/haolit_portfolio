@@ -16,9 +16,7 @@ const Skill = ({ name, x, y }: SkillProps) => {
       initial={{ x: 0, y: 0 }}
       whileInView={{ x: x, y: y, transition: { duration: 1.5 } }}
       viewport={{ once: true }}
-      className="cursor-pointer w-max origin-center absolute 
-       font-semibold bg-dark text-light py-3 px-6 rounded-full dark:bg-light dark:text-dark
-       lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3 xs:bg-transparent xs:dark:bg-transparent xs:text-dark xs:dark:text-light xs:font-bold"
+      className="bg-dark text-light dark:bg-light dark:text-dark xs:bg-transparent xs:dark:bg-transparent xs:text-dark xs:dark:text-light xs:font-bold absolute w-max origin-center cursor-pointer rounded-full px-6 py-3 font-semibold md:px-3 md:py-1.5 md:text-sm lg:px-4 lg:py-2"
     >
       {name}
     </motion.div>
@@ -28,17 +26,11 @@ const Skill = ({ name, x, y }: SkillProps) => {
 const Skills = () => {
   return (
     <>
-      <h2 className="font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32">Skills</h2>
-      <div
-        className="w-full h-[100vh] relative bg-circularLight dark:bg-circularDark flex items-center justify-center 
-      mb-64 md:mb-32 rounded-full
-      lg:bg-circularLightLg lg:dark:bg-circularDarkLg md:bg-circularLightMd md:dark:bg-circularDarkMd 
-      sm:bg-circularLightSm sm:dark:bg-circularDarkSm lg:h-[80vh] sm:h-[60vh] xs:h-[50vh]"
-      >
+      <h2 className="mt-64 w-full text-center text-8xl font-bold md:mt-32 md:text-6xl">Skills</h2>
+      <div className="bg-circularLight dark:bg-circularDark lg:bg-circularLightLg lg:dark:bg-circularDarkLg md:bg-circularLightMd md:dark:bg-circularDarkMd sm:bg-circularLightSm sm:dark:bg-circularDarkSm xs:h-[50vh] relative mb-64 flex h-screen w-full items-center justify-center rounded-full sm:h-[60vh] md:mb-32 lg:h-[80vh]">
         <motion.div
           whileHover={{ scale: 1.05 }}
-          className="cursor-pointer flex rounded-full font-semibold bg-dark text-light p-8 shadow-dark
-        dark:bg-light dark:text-dark lg:p-6 md:p-4 xs:text-xs xs:p-2"
+          className="bg-dark text-light shadow-dark dark:bg-light dark:text-dark xs:text-xs xs:p-2 flex cursor-pointer rounded-full p-8 font-semibold md:p-4 lg:p-6"
         >
           Web
         </motion.div>

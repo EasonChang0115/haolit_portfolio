@@ -20,9 +20,9 @@ const singleWord: Variants = {
 
 const AnimatedText = ({ text, className = '' }: AnimatedTextProps) => {
   return (
-    <div className="py-2 w-full mx-auto flex flex-col items-center justify-center text-center overflow-hidden sm:py-0">
+    <div className="mx-auto flex w-full flex-col items-center justify-center overflow-hidden py-2 text-center sm:py-0">
       <motion.h1
-        className={`inline-block text-dark dark:text-light text-8xl font-bold w-full capitalize ${className} xl:text-6xl`}
+        className={`text-dark dark:text-light inline-block w-full text-8xl font-bold capitalize ${className} xl:text-6xl`}
         variants={quote}
         initial="hidden"
         animate="visible"

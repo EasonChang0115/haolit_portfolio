@@ -16,7 +16,7 @@ const Details = ({ position, company, companyLink, time, address, work }: Detail
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between md:w-[80%]"
+      className="mx-auto my-8 flex w-[60%] flex-col items-start justify-between first:mt-0 last:mb-0 md:w-[80%]"
     >
       <LiIcon reference={ref} />
       <motion.div
@@ -24,10 +24,10 @@ const Details = ({ position, company, companyLink, time, address, work }: Detail
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: 'spring' }}
       >
-        <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
+        <h3 className="xs:text-lg text-2xl font-bold capitalize sm:text-xl">
           {position}{' '}
           <a
-            className="capitalize text-primary dark:text-primaryDark"
+            className="text-primary dark:text-primaryDark capitalize"
             href={companyLink}
             target="_blank"
             rel="noreferrer"
@@ -35,10 +35,10 @@ const Details = ({ position, company, companyLink, time, address, work }: Detail
             @{company}
           </a>
         </h3>
-        <span className="capitalize text-dark/75 font-medium dark:text-light/50 xs:text-sm">
+        <span className="text-dark/75 dark:text-light/50 xs:text-sm font-medium capitalize">
           {time} | {address}
         </span>
-        <p className="font-medium w-full md:text-sm">{work}</p>
+        <p className="w-full font-medium md:text-sm">{work}</p>
       </motion.div>
     </li>
   )
@@ -54,22 +54,30 @@ const Experience = () => {
 
   return (
     <div className="my-64">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
+      <h2 className="xs:text-4xl mb-32 w-full text-center text-8xl font-bold md:mb-16 md:text-6xl">
         Experience
       </h2>
 
-      <div ref={ref} className="relative w-[75%] mx-auto lg:w-[90%] md:w-full">
+      <div ref={ref} className="relative mx-auto w-[75%] md:w-full lg:w-[90%]">
         <motion.div
-          className="absolute left-9 top-0 w-[4px] md:w-[2px] md:left-[30px] xs:left-[20px] h-full bg-dark 
-            origin-top dark:bg-primaryDark dark:shadow-3xl"
+          className="xs:left-5 bg-dark dark:bg-primaryDark dark:shadow-3xl absolute top-0 left-9 h-full w-1 origin-top md:left-7.5 md:w-0.5"
           style={{ scaleY: scrollYProgress }}
         />
-        <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
+        <ul className="xs:ml-2 ml-4 flex w-full flex-col items-start justify-between">
+          <Details
+            position="資深軟體工程師"
+            company="台達電子工業股份有限公司"
+            companyLink="https://www.deltaww.com/zh-TW/"
+            time="Oct 2022 ~ Present"
+            address="Taipei, Taiwan"
+            work="知識管理系統開發，使用 React.js、Next.js、Node.js、Express.js、MongoDB 等技術，協助公司內部知識管理系統的開發與維護。協助專案系統架構，客製系統、前後台專案開發。Sass 產品架構，WebSocket、WebRTC 應用系統等, 開發LLM 相關專案，使用 OpenAI API、LangChain 等技術，協助公司內部 LLM 相關專案的開發與維護。"
+          />
+
           <Details
             position="前端工程師"
-            company="阿利恩股份有限公司"
             companyLink="https://alion.tw/"
-            time="Feb 2021 ~ Present"
+            company="阿利恩股份有限公司"
+            time="Feb 2021 ~ Oct 2022"
             address="Taipei, Taiwan"
             work="協助專案系統架構，客製系統、前後台專案開發。Sass 產品架構，WebSocket、WebRTC 應用，串接第三方 Agora P2P 系統等"
           />

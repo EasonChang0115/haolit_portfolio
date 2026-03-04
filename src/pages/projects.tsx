@@ -26,15 +26,8 @@ interface FeaturedProjectProps {
 
 const FeaturedProject = ({ type, title, summary, img, link, github }: FeaturedProjectProps) => {
   return (
-    <article
-      className="relative flex w-full items-center justify-between rounded-3xl rounded-br-2xl border
-border-solid border-dark bg-light p-12 shadow-2xl dark:border-light dark:bg-dark lg:flex-col 
-lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4"
-    >
-      <div
-        className="absolute top-0 -right-3 -z-10 h-[103%] w-[101%] rounded-[2.5rem] rounded-br-3xl bg-dark
-         dark:bg-light xs:-right-2 xs:h-[102%] xs:w-[100%] xs:rounded-[1.5rem]"
-      />
+    <article className="border-dark bg-light dark:border-light dark:bg-dark xs:rounded-2xl xs:rounded-br-3xl xs:p-4 relative flex w-full items-center justify-between rounded-3xl rounded-br-2xl border border-solid p-12 shadow-2xl lg:flex-col lg:p-8">
+      <div className="bg-dark dark:bg-light xs:-right-2 xs:h-[102%] xs:w-full xs:rounded-3xl absolute top-0 -right-3 -z-10 h-[103%] w-[101%] rounded-[2.5rem] rounded-br-3xl" />
 
       <Link
         href={link}
@@ -54,16 +47,16 @@ lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4"
           priority
         />
       </Link>
-      <div className="flex w-1/2 flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
-        <span className="text-xl font-medium text-primary dark:text-primaryDark xs:text-base">
+      <div className="flex w-1/2 flex-col items-start justify-between pl-6 lg:w-full lg:pt-6 lg:pl-0">
+        <span className="text-primary dark:text-primaryDark xs:text-base text-xl font-medium">
           {type}
         </span>
         <Link href={link} target="_blank" className="underline-offset-2 hover:underline">
-          <h2 className="my-2 w-full text-left text-4xl font-bold lg:text-3xl xs:text-2xl">
+          <h2 className="xs:text-2xl my-2 w-full text-left text-4xl font-bold lg:text-3xl">
             {title}
           </h2>
         </Link>
-        <p className="my-2 rounded-md font-medium text-dark dark:text-light sm:text-sm">
+        <p className="text-dark dark:text-light my-2 rounded-md font-medium sm:text-sm">
           {summary}
         </p>
         <div className="mt-2 flex items-center">
@@ -73,7 +66,7 @@ lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4"
           <Link
             href={link}
             target="_blank"
-            className="ml-4 rounded-lg bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark sm:px-4 sm:text-base"
+            className="bg-dark text-light dark:bg-light dark:text-dark ml-4 rounded-lg p-2 px-6 text-lg font-semibold sm:px-4 sm:text-base"
             aria-label={title}
           >
             Visit Project
@@ -94,14 +87,8 @@ interface ProjectProps {
 
 const Project = ({ title, type, img, link, github }: ProjectProps) => {
   return (
-    <article
-      className="relative flex w-full flex-col items-center justify-center rounded-2xl rounded-br-2xl 
-      border border-solid border-dark bg-light p-6 shadow-2xl dark:border-light dark:bg-dark xs:p-4"
-    >
-      <div
-        className="absolute top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark
-         dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]"
-      />
+    <article className="border-dark bg-light dark:border-light dark:bg-dark xs:p-4 relative flex w-full flex-col items-center justify-center rounded-2xl rounded-br-2xl border border-solid p-6 shadow-2xl">
+      <div className="bg-dark dark:bg-light xs:h-[102%] xs:rounded-3xl absolute top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-4xl rounded-br-3xl md:-right-2 md:w-[101%]" />
 
       <Link
         href={link}
@@ -120,7 +107,7 @@ const Project = ({ title, type, img, link, github }: ProjectProps) => {
         />
       </Link>
       <div className="mt-4 flex w-full flex-col items-start justify-between">
-        <span className="text-xl font-medium text-primary dark:text-primaryDark lg:text-lg md:text-base">
+        <span className="text-primary dark:text-primaryDark text-xl font-medium md:text-base lg:text-lg">
           {type}
         </span>
 
@@ -157,13 +144,13 @@ export default function Projects() {
       </Head>
 
       <TransitionEffect />
-      <main className="mb-16 flex w-full flex-col items-center justify-center dark:text-light">
+      <main className="dark:text-light mb-16 flex w-full flex-col items-center justify-center">
         <Layout className="pt-16">
           <AnimatedText
             text="Imagination Trumps Knowledge!"
-            className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
+            className="xs:text-4xl! mb-16 text-8xl! leading-tight! sm:mb-8 sm:text-6xl! lg:text-7xl!"
           />
-          <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+          <div className="grid grid-cols-12 gap-24 gap-y-32 sm:gap-x-0 md:gap-y-24 lg:gap-x-8 xl:gap-x-16">
             <div className="col-span-12">
               <FeaturedProject
                 type="Featured Project"
